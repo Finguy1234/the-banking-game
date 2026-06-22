@@ -106,14 +106,13 @@
 </style>
 
 <div class="mast">
-  <h1>The Banking Game <span class="adv">Advanced</span></h1>
+  <h1>The Banking Game </h1>
   <div class="sub">Compete for deposits · manage risk · maximize your bank's profit</div>
-  <div class="credit">A game by <b>Dr. Matt Kelly, PhD</b> — Campbell University, Lundy-Fetterman School of Business<br><span style="font-size:10.5px;color:#7e93ab">developed with assistance from Stefan Juárez Schildknecht</span></div>
+  <div class="credit">A game created by <b>Dr. Matthew L. Kelly, PhD</b> — Campbell University, Lundy-Fetterman School of Business<br><span style="font-size:10.5px;color:#7e93ab">developed with assistance from Stefan Juárez Schildknecht</span></div>
   <div class="ticker">
     <div class="tk"><div class="l">Round</div><div class="v" id="tkRound">1</div></div>
     <div class="tk"><div class="l">Short rate</div><div class="v" id="tkShort">4.50%</div></div>
     <div class="tk"><div class="l">30y rate</div><div class="v" id="tkLong">5.80%</div></div>
-    <div class="tk"><div class="l">Regime</div><div class="v" id="tkRegime" style="font-size:13px">Normal</div></div>
     <div class="tk"><div class="l">Banks</div><div class="v" id="tkPlayers">4</div></div>
     <div class="tk"><div class="l">Status</div><div class="v" id="tkState" style="font-size:13px">Open</div></div>
   </div>
@@ -229,28 +228,28 @@
 
   <div id="tab-help" class="hide">
     <div class="card creditcard"><h2>Credits</h2>
-      <div class="by">Created by Dr. Matt Kelly, PhD — Campbell University, Lundy-Fetterman School of Business</div>
+      <div class="by">Created by Dr. Matthew L. Kelly, PhD — Campbell University, Lundy-Fetterman School of Business</div>
       <div class="inst">developed with assistance from Stefan Juárez Schildknecht<br>
-      A game designed to teach students of commercial banking and monetary policy the principles of bank risk management.</div>
+      A game designed to teach principles of bank risk management.</div>
     </div>
     <div class="card help">
       <h2>How to play</h2>
-      <p>Inflation pushes the central bank to hike → long bonds collapse (duration risk) → marked-to-market equity falls → depositors flee (a run) → the bank fire-sells illiquid loans → it fails. The bank that <b>hedged</b> survives; the one that also reached for <b>credit</b> dies twice in a recession. Every mechanic below is one piece of that story.</p>
+      <p> Each player is a bank. Every round, players choose their deposit interest rates, allocate capital to a chosen portfolio of bonds, risky loans, and hedge instruments (swaps and options). Players that choose a high deposit interest rate gain a larger share of total deposits, but pay higher interest expense. Players who allocate their capital to long-term (short-term) bonds expose themselves to higher duration risk. Players who allocate to risky loans earn higher expected interest income, but expose themselves to default risk. Players who hedge can reduce their downside risk, but must pay a premium and/or limit their upside gains. The object of the game is to survive (avoid a bank run) by maintaining positive and growing equity, fulfill capital requirements, maximize profit, and effectively control risks. Students learn about interest rate risk and other principles of banking by playing to win against their peers. The Central Bank sets short rates and capital requirements.</p>
       <h3>The balance sheet</h3>
-      <p>Assets = Cash + Bonds + Loans, funded by Deposits + Equity. Equity is a real capital base that absorbs losses and is carried across rounds — your score is your equity level, and the capital ratio (Equity / Assets) decides whether you survive.</p>
+      <p>Assets = Cash + Bonds + Loans, funded by Deposits + Equity. Equity is a real capital base that absorbs losses and is carried across rounds — your score is your equity level, and the capital ratio (Equity / Assets) decides whether you fulfill capital requirements and survive.</p>
       <h3>The change-in-equity identity</h3>
-      <p class="num" style="font-size:12.5px">ΔEquity = NII (carry, incl. term premium) + Securities G/L (rate risk) + Hedge P&amp;L − Credit losses − Fire-sale loss</p>
+      <p class="num" style="font-size:12.5px">ΔEquity = Net Interest Income + Securities Gains/Losses + Hedge P&amp;L − Credit losses − Fire-sale losses in the event of low equity</p>
       <h3>The modules</h3>
       <table>
         <tr><th>Module</th><th>What it adds</th><th>The lesson</th></tr>
-        <tr><td><b>Term premium</b></td><td>Upward-sloping curve: long bonds pay more carry</td><td>You're paid to bear duration — is the premium worth the rate move?</td></tr>
-        <tr><td><b>Hedging</b></td><td>A swap/future notional on a chosen tenor</td><td>Duration hedging — and basis risk when the hedge tenor ≠ your book</td></tr>
-        <tr><td><b>Credit / loans</b></td><td>Floating-rate loans: higher yield, but defaults</td><td>Reaching for yield blows up in a recession</td></tr>
-        <tr><td><b>Inflation</b></td><td>A policy rule that moves rates with inflation</td><td>Why rates move — the 2022 hiking cycle</td></tr>
-        <tr><td><b>Liquidity &amp; runs</b></td><td>Weak banks lose deposits and fire-sell assets</td><td>Solvency vs liquidity — the SVB failure</td></tr>
+        <tr><td><b>Term premium</b></td><td>Upward-sloping curve: long bonds pay more carry</td><td>You're paid to bear duration — is the liquidity premium worth the rate move?</td></tr>
+        <tr><td><b>Hedging</b></td><td>A swap/future notional on a chosen tenor</td><td>Duration hedging — and basis risk when the hedge tenor ≠ the tenor of your book</td></tr>
+        <tr><td><b>Credit / loans</b></td><td>Floating-rate loans: higher yield, but has risk of drefaults</td><td>Reaching for yield blows up in a recession</td></tr>
+        <tr><td><b>Inflation</b></td><td>A policy rule that moves rates with inflation</td><td>Why rates move - realism</td></tr>
+        <tr><td><b>Liquidity &amp; runs</b></td><td>Weak banks lose deposits and fire-sell assets</td><td>Solvency vs liquidity</td></tr>
       </table>
       <h3>Classroom flow</h3>
-      <p>Set economy &amp; modules → enter decisions → Lock → generate the new curve → Resolve → Scoreboard → next round. Each round's new rates become the next round's starting curve.</p>
+      <p>Set economy &amp; modules → players make decisions, enter decisions → Lock decisions → generate the new interest rates each round → Resolve balance sheet and incomes → Scoreboard → next round. Each round's new rates become the next round's starting curve.</p>
       <p style="color:var(--muted);font-size:12px;margin-top:18px">Engine audited against the original Excel: with a flat curve, bond prices, capital gains and the core P&amp;L match to the cent.</p>
     </div>
   </div>
@@ -364,10 +363,10 @@ const Engine = (() => {
 const state={
   round:1, startShort:0.045, startLong:0.058, Dtotal:1e12, k0:0.08,
   players:[
-    {name:"Maturity Bank", dep:4.0, wA:0,wB:0,wC:10,wD:30,wE:50,wLoan:0,wCash:10, hedgeType:"none", hedge:0,   hedgeT:30},
-    {name:"Swap Hedge",    dep:4.0, wA:0,wB:0,wC:10,wD:30,wE:50,wLoan:0,wCash:10, hedgeType:"swap", hedge:-80, hedgeT:30},
-    {name:"Option Hedge",  dep:4.0, wA:0,wB:0,wC:10,wD:30,wE:50,wLoan:0,wCash:10, hedgeType:"option", hedge:-80, hedgeT:30},
-    {name:"Conservative",  dep:3.0, wA:40,wB:30,wC:0,wD:0,wE:0, wLoan:0, wCash:30, hedgeType:"none", hedge:0,   hedgeT:10},
+    {name:"Bank 1", dep:4.0, wA:0,wB:0,wC:10,wD:30,wE:50,wLoan:0,wCash:10, hedgeType:"none", hedge:0,   hedgeT:30},
+    {name:"Bank 2",    dep:4.0, wA:0,wB:0,wC:10,wD:30,wE:50,wLoan:0,wCash:10, hedgeType:"swap", hedge:-80, hedgeT:30},
+    {name:"Bank 3",  dep:4.0, wA:0,wB:0,wC:10,wD:30,wE:50,wLoan:0,wCash:10, hedgeType:"option", hedge:-80, hedgeT:30},
+    {name:"Bank 4",  dep:3.0, wA:40,wB:30,wC:0,wD:0,wE:0, wLoan:0, wCash:30, hedgeType:"none", hedge:0,   hedgeT:10},
   ],
   equity:{}, confidence:{}, failed:{},
   locked:false, method:"manual", pending:null, lastResult:null, scoreboard:[],
