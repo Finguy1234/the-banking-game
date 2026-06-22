@@ -106,10 +106,9 @@
 </style>
 
 <div class="mast">
-  <div class="eyebrow">A game by Dr. Matt Kelly, PhD</div>
   <h1>The Banking Game <span class="adv">Advanced</span></h1>
-  <div class="sub">Compete for deposits · manage duration, credit, liquidity & runs · maximize your bank's equity</div>
-  <div class="credit">A game by <b>Dr. Matt Kelly, PhD</b> — Campbell University, Lundy-Fetterman School of Business<br><span style="font-size:10.5px;color:#7e93ab">Advanced digital version developed by Stefan Juárez Schildknecht</span></div>
+  <div class="sub">Compete for deposits · manage risk · maximize your bank's profit</div>
+  <div class="credit">A game by <b>Dr. Matt Kelly, PhD</b> — Campbell University, Lundy-Fetterman School of Business<br><span style="font-size:10.5px;color:#7e93ab">developed with assistance from Stefan Juárez Schildknecht</span></div>
   <div class="ticker">
     <div class="tk"><div class="l">Round</div><div class="v" id="tkRound">1</div></div>
     <div class="tk"><div class="l">Short rate</div><div class="v" id="tkShort">4.50%</div></div>
@@ -129,8 +128,8 @@
 
   <div id="tab-play">
     <div class="card">
-      <h2><span class="step">1</span>Central bank &amp; economy</h2>
-      <p class="hint">Set the curve, the capital regime, and which modules are active this round.</p>
+      <h2><span class="step">1</span>Central bank &amp; economy settings</h2>
+      <p class="hint">Set the market interest rate and yield curve, the capital regulations, and which modules are active this round.</p>
       <div class="row">
         <div class="field"><label>Short rate (%)</label><input id="cfgShort" class="num" value="4.50"></div>
         <div class="field"><label>30y rate (%)</label><input id="cfgLong" class="num" value="5.80"></div>
@@ -230,12 +229,12 @@
 
   <div id="tab-help" class="hide">
     <div class="card creditcard"><h2>Credits</h2>
-      <div class="by">Developed by Stefan Juárez Schildknecht</div>
-      <div class="inst">Advanced digital version: balance-sheet model, term premium, hedging, credit risk, inflation-driven policy, liquidity and bank runs.<br>
-      Based on the original <b>Banking Game by Dr. Matt Kelly, PhD</b> — Campbell University, Lundy-Fetterman School of Business (FIN 420 / MBA 732, Commercial Banking).</div>
+      <div class="by">Created by Dr. Matt Kelly, PhD — Campbell University, Lundy-Fetterman School of Business</div>
+      <div class="inst">developed with assistance from Stefan Juárez Schildknecht<br>
+      A game designed to teach students of commercial banking and monetary policy the principles of bank risk management.</div>
     </div>
     <div class="card help">
-      <h2>The arc of the game</h2>
+      <h2>How to play</h2>
       <p>Inflation pushes the central bank to hike → long bonds collapse (duration risk) → marked-to-market equity falls → depositors flee (a run) → the bank fire-sells illiquid loans → it fails. The bank that <b>hedged</b> survives; the one that also reached for <b>credit</b> dies twice in a recession. Every mechanic below is one piece of that story.</p>
       <h3>The balance sheet</h3>
       <p>Assets = Cash + Bonds + Loans, funded by Deposits + Equity. Equity is a real capital base that absorbs losses and is carried across rounds — your score is your equity level, and the capital ratio (Equity / Assets) decides whether you survive.</p>
